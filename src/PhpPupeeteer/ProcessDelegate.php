@@ -24,6 +24,12 @@ class ProcessDelegate implements ShouldHandleProcessDelegation
 	public function resourceFromOriginalClassName(string $className): ?string{
 		$result = null;
 
+		if ($className === 'HTTPResponse') {
+			$className = 'Response';
+		} elseif ($className === 'HTTPRequest') {
+			$className = 'Request';
+		}
+
 		foreach (static::CLASSPATH as $path) {
 			$class = $path.$className;
 			if (\class_exists($class)) {
