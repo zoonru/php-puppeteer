@@ -3,8 +3,14 @@
     "description": "Extend puphpeteer",
     "type": "library",
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/zoonru/puphpeteer.git"
+        }
+    ],
     "require": {
-        "php": ">=7.1",
+        "php": ">=7.4",
         "nesk/puphpeteer": "dev-zoon",
         "ext-mbstring": "*",
         "ext-json": "*"
